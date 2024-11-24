@@ -11,7 +11,6 @@ struct Item {
     string description;
 };
 
-// Function to add an item to the inventory
 void addItem(vector<Item>& inventory) {
     Item item;
     cout << "Enter item name: ";
@@ -21,13 +20,12 @@ void addItem(vector<Item>& inventory) {
     cout << "Enter item price: ";
     cin >> item.price;
     cout << "Enter item description: ";
-    cin.ignore(); // Ignore newline character
+    cin.ignore(); 
     getline(cin, item.description);
     inventory.push_back(item);
     cout << "Item added successfully!\n";
 }
 
-// Function to remove an item from the inventory
 void removeItem(vector<Item>& inventory) {
     string itemName;
     cout << "Enter item name to remove: ";
@@ -42,7 +40,6 @@ void removeItem(vector<Item>& inventory) {
     cout << "Item not found!\n";
 }
 
-// Function to search for an item in the inventory
 void searchItem(const vector<Item>& inventory) {
     string itemName;
     cout << "Enter item name to search: ";
@@ -60,7 +57,6 @@ void searchItem(const vector<Item>& inventory) {
     cout << "Item not found!\n";
 }
 
-// Function to display the entire inventory
 void displayInventory(const vector<Item>& inventory) {
     if (inventory.empty()) {
         cout << "Inventory is empty!\n";
